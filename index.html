@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice-Controlled Image Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/37df75b44e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Voice-Controlled Image Gallery</h1>
+    <div class="gallery-container">
+      <div class="image-grid">
+        <!-- Dynamic image gallery -->
+        <div class="image-item">
+          <img src="cat.jpeg" alt="Image 1" class="gallery-image" data-index="1">
+        </div>
+        <div class="image-item">
+          <img src="zebra.jpeg" alt="Image 2" class="gallery-image" data-index="2">
+        </div>
+        <div class="image-item">
+          <img src="elephant.jpeg" alt="Image 3" class="gallery-image" data-index="3">
+        </div>
+        <div class="image-item">
+          <img src="dog.png" alt="Image 4" class="gallery-image" data-index="4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for zooming images -->
+  <div class="modal fade" id="zoomModal" tabindex="-1" role="dialog" aria-labelledby="zoomModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="" id="zoomedImage" class="img-fluid">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
